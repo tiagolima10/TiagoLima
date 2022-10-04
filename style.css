@@ -1,0 +1,729 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Courier, monospace;
+}
+
+
+    html{
+    initial-letter-align: initial;
+    scroll-behavior: smooth ;}
+
+    img {
+      max-width: 80%;
+      display: block;
+    }
+    
+    header {
+      position: fixed;
+      background-color: #781437;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    header .menu {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 0px 20px;
+    }
+
+    header .menu li {
+        display: inline-block;
+    }
+
+    header .menu a {
+        font-weight: bold;
+        background-color: rgba(255, 255, 255, 0.075);
+        color:#005390;
+        padding: 8px 12px;
+        border-radius: 3px;
+        transition: 200ms;
+    }
+
+    header .menu .ativo {
+    font-family: Arial Black;
+    color: #005390;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+header .menu a:hover{
+    background-color: #781437;
+}
+
+/*CAMPO DE LOGIN E CADASTRO*/
+
+/*body somente da tela de cadastro e login*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,200;1,400;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+
+.banner video{
+  background-blend-mode:hard-light;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+  .bodylogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(18, 13, 22);
+  }
+
+  .box{
+    position: relative;
+    width: 380px;
+    height: 520px;
+    background-color: black;
+    border-radius: 8px;
+    overflow:hidden ;
+  }
+
+.box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+@keyframes animate
+{
+0%
+    {
+    transform: rotate(0deg);
+}
+100%
+{
+    transform: rotate(360deg);
+}
+}
+
+.form {
+  position: absolute;
+  inset: 2px;
+  border-radius: 8px;
+  background: #28292d;
+  z-index: 10;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.form h1{
+  color: #45f3ff;
+  margin-top: -30px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.inputBox{
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+
+.inputBox input{
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
+}
+.inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  color: #45f3ff;
+  transform: translateX(-10px) translateY(-34px);
+  font-size: 0.75em;
+}
+
+.inputBox label{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i{
+height: 44px;
+}
+
+
+
+#botlog{
+border: none;
+outline: none;
+background: #45f3ff;
+padding: 10px 15px;
+width: 120px;
+margin-top: 10px;
+border-radius: 4px;
+font-weight: 600;
+cursor: pointer;
+}
+
+#botlog:hover {
+  background-color: #008892;
+}
+
+
+#botlog{
+  opacity:0.8;
+}
+
+
+
+/*FIM CAMPO LOGIN*/
+
+/*Contagem Regressiva*/
+p#titulocontagem {
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 0px; color: #fff;
+}
+
+p#contagem {
+  text-align: center;
+  font-size: 55px;
+  color: #fff;
+  padding-bottom: 80px;
+}
+
+/* Fim Contagem Regressiva */
+
+/* Textos Copa */
+
+section p {
+  font-size: 1.2em;
+  font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
+}
+
+.apresentacao {
+  color: white;
+  margin: 0 auto;
+  text-align: justify;
+  max-width: 80%;
+  padding-bottom: 50px;
+}
+
+.apresentacao h2 {
+  font-size: 2em;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.apresentacao img {
+  margin: 0 auto;
+  max-width: 50%;
+  padding-top: 20px;
+}
+
+.bola {
+  color: white;
+  margin: 0 auto;
+  text-align: justify;
+  max-width: 80%;
+  padding-bottom: 50px;
+}
+
+.bola h2 {
+  font-size: 2em;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.bola img {
+  margin: 0 auto;
+  max-width: 50%;
+  padding-top: 20px;
+}
+
+.mascote {
+  color: white;
+  margin: 0 auto;
+  text-align: justify;
+  max-width: 80%;
+  padding-bottom: 50px;
+}
+
+.mascote h2 {
+  font-size: 2em;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.mascote img {
+  margin: 0 auto;
+  max-width: 50%;
+  padding-top: 20px;
+}
+
+.estadio {
+  color: white;
+  margin: 0 auto;
+  text-align: justify;
+  max-width: 80%;
+  padding-bottom: 50px;
+}
+
+.estadio h2 {
+  font-size: 2em;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.estadio img {
+  margin: 0 auto;
+  max-width: 50%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hover:hover {
+  transform: scale(1.15);
+  transition-duration: 1000ms ;
+}
+
+/* Fim textos copa */
+
+/* Grupos copa */
+
+.grupos {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.grupos h2 {
+  color: white;
+  font-size: 2em;
+  padding: 30px 20px;
+}
+
+.grupos img {
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.grupos h3 {
+  color: white;
+  padding-bottom: 5px;
+}
+
+.grupos p {
+  padding-bottom: 10px;
+  color: white;
+}
+
+/*Fim grupos copa*/
+
+/* Times Perfilados Pág 2 */
+#titulo2 {
+  font-size: 2.7em;
+  padding: 100px 0px 50px 0px; 
+  text-align:center;
+  color: white;
+}
+
+.perfilados {
+  color: white;
+  margin: 0 auto;
+  text-align: justify;
+  max-width: 70%;
+  padding-bottom: 50px;
+}
+
+.perfilados h2 {
+  font-size: 2em;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.perfilados img {
+  margin: 0 auto;
+  max-width: 420px;
+  padding-top: 20px;
+}
+
+.perfilados p {
+  text-align: center;
+}
+
+/* Fim Times perfilados */
+
+#imagens img{
+  border-radius: 40px 40px;
+}
+
+
+/* Logo Seleções Flexbox */
+
+main {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/tacadacopafundo.png');
+  background-position: center;
+  background-size: cover;
+ }
+
+.flex {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.flex a img{
+  margin-left: 50px;  
+}
+
+
+.flex > div {
+  flex: 1 1 200px;
+  margin: 10px;
+  box-shadow:2px 2px 2px black;
+  border-radius: 40px;
+  position:relative;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.flex > div ::after{
+  position:absolute;
+  border-radius:5px;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: -5;
+}
+
+.flex > div :hover{
+  transform:scale(1.12,1.12);
+  transition-delay: 200ms;
+}
+
+.flex p {
+  font-weight: bold;
+  color: white;
+  padding: 5px;
+}
+
+#favoritas {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  padding: 30px 20px;
+}
+
+#fav {
+  padding-bottom: 75px;
+}
+
+/* Fim Logo seleções Flexbox */
+
+
+
+/*Botão de Busca*/
+  
+  .search-container{
+    padding-top: 125px;
+    padding-bottom: 80px;
+    max-width: 690px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .search-container h1 {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+  }
+  
+  input#search-bar{
+    color: black;
+    margin: 10px auto;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid #000000;
+    outline: none;
+  }
+  
+  .search-icon{
+    position: relative;
+    float: right;
+    max-width: 75px;
+    max-height: 75px;
+    top: -70px;
+    right: -18px;
+  }  
+
+  /*Fim botão de busca*/
+
+/* Formulário */
+
+/* Elementos com o ID "titulo" */
+
+form#formulario {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  padding-left: 35%;
+}
+
+#titulo {
+  font-family: sans-serif;
+  color: white;
+} 
+
+/* Elementos com o ID "subtitulo" */
+#subtitulo {
+  font-family: sans-serif;
+  color: white;
+} 
+
+#check{
+  display: inline-block;
+}
+
+/* Elementos de tag <fieldset>*/
+fieldset {
+  border: 0;
+}
+
+/* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
+input, select, textarea, button {
+  font-family: sans-serif;
+  font-size: 1em;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
+.grupo:before, .grupo:after {
+  display: table;
+}
+
+/* Elementos de classe "grupo" no estado da pseudoclasse "after" */
+.grupo:after {
+  clear: both;
+}
+
+/* Elementos de classe "campo" */
+.campo {
+  margin-bottom: 1em;
+}
+
+/* Elementos de classe "campo" de tag <label> */
+.campo label {
+  margin-bottom: 0.2em;
+  color: white;
+  display: block;
+}
+
+/* Elementos de classe "campo" ou "grupo" de tag <fieldset> */
+fieldset.grupo .campo {
+  float:  left;
+  margin-right: 1em;
+  max-width: 80%;
+}
+
+/* Elementos de classe "campo" das tags <input> com atributo text e email, da tag <select> e da tag <textarea>*/
+.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+  padding: 0.2em;
+  border: 1px solid #781437;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  display: block;
+  max-width: 80%;
+}
+
+/* Elementos de classe "campo" de tag <select> e <option>*/
+.campo select option {
+  padding-right: 1em;
+}
+
+/* Elemento de classe "campo" com tag <input>, <select> e <textarea> tocas com estado da pseudoclasse "focus"*/
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+  background: #965b70;
+}
+
+/* Elemento de classe "botao" */
+.botao {
+  font-size: 1.2em;
+  background: white;
+  border: 0;
+  margin-bottom: 1em;
+  color: black;
+  padding: 0.2em 0.6em;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+.botao:hover {
+  background: #781437;
+  box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+  text-shadow: none;
+}
+
+/* Elementos de classe botão e de tag <select> */
+.botao, select{
+  cursor: pointer;
+  color: black;
+}
+
+/* Fim Formulário */
+
+  /* Footer */ 
+  footer{
+    background-color: #023398;
+    padding: 50px 0;
+}
+.container-footer{
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+}
+.row-footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+}
+.footer-col ul{
+    list-style: none;
+}
+.footer-col ul li{
+    margin: 10px 0;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #cecdcd;
+    padding-left: 10px;
+}
+
+.footer-col .form-sub input{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    background-color: #415aca;
+}
+.footer-col .form-sub input::placeholder{
+    color: white;
+}
+.footer-col .form-sub button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px; 
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #415aca;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: white;        
+}
+
+.footer-bottom{
+  width: 1920vh;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom p{
+  font-size: 17px;
+  word-spacing: 2px;
+  color: white;
+}
+/*Fim Footer */ 
+
+/*Botao para topo do site */
+
+#topo{
+text-decoration: none;
+color:white;
+background-color: #781437;
+padding: 20px;
+position: fixed;
+right: 10px;
+bottom: 10px;
+}

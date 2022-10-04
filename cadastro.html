@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bodylogin">
+    
+    <div class="banner">
+  <video autoplay muted loop src="../Qatar Cadastro Login/img/neymarbc.mp4"></video>
+    </div>
+    
+    
+    
+    <div class="box">
+    <div class="form">
+    <div class="inputBox">
+        <form id="cadastro">
+        <h1 id="log" style="margin-bottom: 20px;" > Cadastro de Usuário </h1>
+        
+        <input type="text" name="nome" id="nome" class="item" style="color: rgb(255, 255, 255);">
+        <span>Nome:</span>
+        <label for="nome" style="color: white;"> </label>
+        <i></i>
+    </div>
+    
+    <div class="inputBox">    
+        
+        
+        <input type="text" name="usuario" id="usuario" class="item" style="color: rgb(255, 255, 255);">
+        <span>Usuário:</span>
+        <label for="usuario" style="color: white;"> </label>
+        <i></i>
+    </div>
+        
+        <div class="inputBox">
+            
+             <!-- Ao clicar no nome acende a caixa -->
+        <input type="email" name="email" id="email" class="item" style="color: rgb(255, 255, 255);"> 
+        <label for="email" class="item">  </label>
+        <span>E-mail:</span>
+        
+    </div>
+        
+        <div class="inputBox">
+            <label for="senha" class="item">  </label> <!-- Ao clicar no nome acende a caixa -->
+        <input type="password" name="senha" id="senha" class="item" style="color: rgb(255, 255, 255);">
+        <span>Senha:</span>
+        <i></i>
+    </div>
+
+        <input type="button" value="Cadastrar" class="item" onclick="cadastrar()" style="width: 100px;" id="botlog">
+    </form>
+    </div>
+</div>
+    <script src="js/cadastro.js"></script>
+</body>
+
+</html>
