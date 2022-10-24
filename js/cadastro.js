@@ -14,6 +14,7 @@ function cadastrarUsuario(nome, usuario, email, senha) {
     if (document.getElementById("email").value != "" && document.getElementById("senha").value != "" && document.getElementById("nome").value != "" && document.getElementById("usuario").value != "") {
         if (bancoUsuarios.length == 0) {
             bancoUsuarios.push(novoUsuario) // Inserindo novo usuario e colocando no array com as informações
+            //location.href = 'localhost:8082/cadastrar'
             location.href = 'login.html' // Ao cadastrar vai para a tela
             return alert("Usuário cadastrado com sucesso")
     } else {
@@ -33,12 +34,33 @@ function cadastrarUsuario(nome, usuario, email, senha) {
 }
 
 function cadastrar() {
-    let nome = document.getElementById("nome").value
-    let usuario = document.getElementById("usuario").value
-    let email = document.getElementById("email").value
-    let senha = document.getElementById("senha").value
+    let nome = document.getElementById("nome")
+    let usuario = document.getElementById("usuario")
+    let email = document.getElementById("email")
+    let senha = document.getElementById("senha")
 
-    cadastrarUsuario(nome, usuario, email, senha) //Chamando os valores das variaveis para a função 
+    fetch("http://localhost:8082/cadastrar",
+                {
+                    method: 'POST',
+                    headers: {
+                        'Accept' : 'application/json',
+                        'Content-Type' : 'application/json'
+                    },
+
+                    body: JSON.stringify({
+                        nome : nome.value,
+                        usuario : usuario.value,
+                        email : email.value,
+                        senha : senha.value
+                    }) //Conversor para JSON
+                })
+            .then(function(res) {console.log(res)})
+            .catch(function(res){console.log(res)})
+            
+
+    
+
+    /*cadastrarUsuario(nome, usuario, email, senha)*/ //Chamando os valores das variaveis para a função 
 
     document.getElementById("nome").value = ""
     document.getElementById("usuario").value = ""
